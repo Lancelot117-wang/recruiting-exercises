@@ -1,0 +1,47 @@
+Case1:
+Order: {apple:1}
+Inventory distribution:  [{name:owd,inventory:{apple:1}}]
+Function output: [{owd:{apple:1}}]
+Expected Answer: [{owd:{apple:1}}]
+
+Case2:
+Order: {apple:10}
+Inventory distribution:  [{name:owd,inventory:{apple:5}}, {name:dm,inventory:{apple:5}}]
+Function output: [{owd:{apple:5}}, {dm:{apple:5}}]
+Expected Answer: [{owd:{apple:5}}, {dm:{apple:5}}]
+
+Case3:
+Order: {apple:1}
+Inventory distribution:  [{name:owd,inventory:{apple:0}}]
+Function output: []
+Expected Answer: []
+
+Case4:
+Order: {apple:2}
+Inventory distribution:  [{name:owd,inventory:{apple:1}}]
+Function output: []
+Expected Answer: []
+
+Case5:
+Order: {banana:1, orange:1, apple:1}
+Inventory distribution:  [{name:owd,inventory:{apple:1}}, {name:dm,inventory:{banana:1}}]
+Function output: []
+Expected Answer: []
+
+Case6:
+Order: {banana:1, apple:1}
+Inventory distribution:  [{name:owd,inventory:{apple:1}}, {name:dm,inventory:{banana:1}}]
+Function output: [{owd:{apple:1}}, {dm:{banana:1}}]
+Expected Answer: [{owd:{apple:1}}, {dm:{banana:1}}]
+
+Case7:
+Order: {banana:1, apple:1}
+Inventory distribution:  [{name:owd,inventory:{apple:1}}, {name:dm,inventory:{banana:1, apple:1}}]
+Function output: [{dm:{banana:1, apple:1}}]
+Expected Answer: [{dm:{banana:1, apple:1}}]
+
+Case8:
+Order: {banana:2, orange:1, apple:1}
+Inventory distribution:  [{name:owd,inventory:{banana:1, apple:1}}, {name:dm,inventory:{banana:1, orange:1, apple:1}}]
+Function output: [{owd:{banana:1, apple:1}}, {dm:{banana:1, orange:1}}]
+Expected Answer: [{owd:{banana:1, apple:1}}, {dm:{banana:1, orange:1}}]
